@@ -15,12 +15,19 @@ const studentSchema = new mongoose.Schema(
         type: String,
         required: true
     },
+    category:{
+        type: String,
+        required: true,
+        enum: ['primary', 'secondry'],
+        default: false
+    },
     addmissionId:{
         type:Number,
         required: true,
         unique: true,
         trim: true
     },
+    
     },
     {
         timestamps: true,
